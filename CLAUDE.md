@@ -1,9 +1,12 @@
-# Dive_App — 다이브로이드 케이스용 대체 카메라 앱
+# Diveroid Revive — 다이브로이드 케이스용 대체 카메라 앱 (구 Dive_App)
 
 > 이 프로젝트는 `H:\Claude\Dive_App` 에서 독립적으로 진행한다. 상위 폴더에 CLAUDE.md 를 두지 말 것.
+> GitHub 공개 저장소 `diveroid-revive` (MIT). 패키지 `com.sejin.diveroidrevive`, 앱 라벨 "Diveroid Revive".
+> README 는 공개용(영/한) — 사용자 노출 문서. 내부 메모는 이 파일에만.
 
 ## 배경
 - 사용자는 **다이브로이드(Diveroid) 방수 케이스**에 폰을 넣어 수중 촬영. 센서(다이브컴퓨터) 배터리는 죽어서 **케이스만** 사용.
+- **만든 이유(공식 서사)**: 센서 배터리가 다 되면 공식 앱이 아예 못 쓰게 막아놓음 → 멀쩡한 케이스를 되살린다.
 - 기본 앱 불만: 중간에 에러 나면 다시 못 켬, 절전모드가 실질적 절전이 안 됨.
 - 목표: 기본 앱의 버튼 조작 UX를 그대로 살린 **가볍고 안 죽는** 카메라 앱.
 
@@ -84,7 +87,10 @@
 - v0.3 (2026-09-07): 절전 = 순수 검정(시계 제거), 진동 제거, 잠금 위 표시, GPS 시작/종료 기록, **수중 색보정(ISP WB 게인)** + 강도 설정. **S23 FE 실기기에서 1~5 전부 정상 확인됨** (수동 게인 동작).
 - v0.4 (2026-09-07): 화면비 수정(ResolutionSelector + Recorder aspect + 프리뷰 레터박스 + HUD 표시), 기록 목록/상세 화면(제목·메모 편집, 삭제, 지도), 수중모드 전환 와이프 애니메이션, 버튼 이름표, **4개 언어**(en/ko/ja/zh, AppCompat 앱별 로케일).
 - v0.5 (2026-09-07): 와이프 2초, 영어 강도 라벨 단축(줄바꿈), 기록 제목 기본값 = 시작 지점 **영어 지명**(Geocoder, subLocality→locality→…), 종료 지명은 제목 비었을 때만. `DiveApp-v0.5.apk`
-- v0.6 (2026-09-07): **UI 리디자인 = A안 "다이브 컴퓨터"** 적용 (사용자 선택). 콘티 원본은 `design/` (B·C안 포함). `DiveApp-v0.6.apk`
+- v0.6 (2026-09-07): **UI 리디자인 = A안 "다이브 컴퓨터"** 적용 (사용자 선택). 콘티 원본은 `design/` (B·C안 포함).
+- v0.6.1 (2026-09-07): 방향 행 줄바꿈 수정.
+- v0.7.0 (2026-10-10): **이름 변경 DiveApp → Diveroid Revive** (패키지·테마·prefs·DCIM 폴더 전부). git init, MIT LICENSE, 공개 README(영/한). `DiveroidRevive-v0.7.0.apk`
+  - 패키지가 바뀌어 기존 설치본과 별개 앱. 이전 기록(dives.jsonl)은 이전 앱에 남음.
 
 ## 디자인 시스템 (A · Dive Computer) — 새 UI 는 반드시 이 토큰으로
 - 색 (`res/values/colors.xml`): `bg #05080C` · `panel #0B1218` · `border #3B5560` · `divider #1C2A32` · `accent #4FE3FF` · `accent_dim #8FD3E0` · `muted #4A6A75` · `text #E8F6FA` · `rec #FF5252`. 다른 색 추가 금지.
