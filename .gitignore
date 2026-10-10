@@ -1,0 +1,9 @@
+.gradle/
+build/
+local.properties
+*.apk
+*.iml
+.idea/
+# 디자인 캔버스 산출물(2MB, 아트보드 원본만 커밋)
+design/*.html
+!design/*.dc.html

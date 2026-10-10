@@ -1,0 +1,18 @@
+<resources>
+    <color name="ic_launcher_bg">#05080C</color>
+
+    <!-- A · Dive Computer 토큰 -->
+    <color name="bg">#05080C</color>
+    <color name="panel">#0B1218</color>
+    <color name="border">#3B5560</color>
+    <color name="divider">#1C2A32</color>
+    <color name="accent">#4FE3FF</color>
+    <color name="accent_dim">#8FD3E0</color>
+    <color name="muted">#4A6A75</color>
+    <color name="text">#E8F6FA</color>
+    <color name="rec">#FF5252</color>
+    <color name="rec_text">#FF8A80</color>
+    <color name="accent_fill">#144FE3FF</color>
+    <color name="accent_glow">#1F4FE3FF</color>
+    <color name="accent_press">#404FE3FF</color>
+</resources>

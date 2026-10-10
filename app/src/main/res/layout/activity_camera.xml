@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- 크기는 코드에서 설정 화면비에 맞춰 잡음 (레터박스). 저장 결과와 같은 영역 -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:scaleType="fillCenter" />
+
+    <!-- 수중모드 전환 와이프: 전환 직전 프레임을 덮어두고 왼쪽부터 걷어냄 -->
+    <ImageView
+        android:id="@+id/wipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/flash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@android:color/white" />
+
+    <!-- 중앙 조준 사각. 초점 잡을 때 시안으로 -->
+    <View
+        android:id="@+id/focusBox"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:background="@drawable/focus_box" />
+
+    <!-- HUD 왼쪽 열 (오른쪽 28% 는 버튼 구역) -->
+    <LinearLayout
+        android:id="@+id/hud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hudTime"
+                style="@style/HudNumber"
+                android:letterSpacing="0.04"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/hudBattery"
+                style="@style/HudNumber"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/chakra_petch_semibold"
+                android:letterSpacing="0.06"
+                android:textColor="@color/accent"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/accent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/hudDiveLabel"
+                    style="@style/HudLabel"
+                    android:text="@string/dive_time_label" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hudDiveMain"
+                        style="@style/HudNumber"
+                        android:textSize="44sp" />
+
+                    <TextView
+                        android:id="@+id/hudDiveSec"
+                        style="@style/HudNumber"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/accent_dim"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/modeLabel"
+                style="@style/Chip"
+                android:background="@drawable/chip_border"
+                android:textColor="@color/accent" />
+
+            <TextView
+                android:id="@+id/aspectLabel"
+                style="@style/Chip"
+                android:layout_marginStart="6dp" />
+
+            <TextView
+                android:id="@+id/underwaterLabel"
+                style="@style/Chip"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/rec_dot" />
+
+            <TextView
+                android:id="@+id/recLabel"
+                style="@style/HudNumber"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/chakra_petch_semibold"
+                android:letterSpacing="0.06"
+                android:textColor="@color/rec_text"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 셀렉터: 화면 중앙 세로 4개 (칩은 코드에서) -->
+    <LinearLayout
+        android:id="@+id/selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <!-- 버튼 구역 링 + 이름표. 위치는 코드에서 -->
+    <View android:id="@+id/zoneTop" android:layout_width="62dp" android:layout_height="62dp" android:background="@drawable/zone_idle" />
+    <View android:id="@+id/zoneMid" android:layout_width="62dp" android:layout_height="62dp" android:background="@drawable/zone_idle" />
+    <View android:id="@+id/zoneBottom" android:layout_width="62dp" android:layout_height="62dp" android:background="@drawable/zone_idle" />
+    <TextView android:id="@+id/zoneTopLabel" style="@style/ZoneLabel" />
+    <TextView android:id="@+id/zoneMidLabel" style="@style/ZoneLabel" />
+    <TextView android:id="@+id/zoneBottomLabel" style="@style/ZoneLabel" />
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/Chip"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/chip_border"
+        android:textColor="@color/text"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <!-- 종료: 플런저가 닿지 않는 왼쪽 아래, 길게 눌러야 동작 -->
+    <TextView
+        android:id="@+id/btnExit"
+        style="@style/Chip"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="14dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="@string/exit_hold"
+        android:textSize="13sp" />
+
+    <!-- 절전: OLED 완전 검정만. Button 의 elevation 보다 위에 오도록 elevation 지정. 터치하면 복귀 -->
+    <View
+        android:id="@+id/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:elevation="24dp"
+        android:visibility="gone" />
+</FrameLayout>
