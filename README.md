@@ -20,7 +20,7 @@
 
 원래 앱의 3버튼 조작법은 그대로 두고, 기능을 조금 보정했습니다.
 
-절전모드는 OLED 동작특성을 고려햐여 진짜 off 되도록 설정했습니다. 오래 실행한 경우의 에러도 줄여 awake의 성능도 향상되었습니다.
+절전모드는 OLED 동작 특성을 고려해 화면이 진짜로 꺼지도록 했고, 오래 실행했을 때 나던 에러를 줄여 절전에서 깨어나는 것도 안정적으로 만들었습니다.
 
 ### 버튼
 
@@ -36,13 +36,13 @@
 
 ### 기능
 
-- **진짜 절전**: 완전 검정 화면(OLED) + 카메라 해제. 아무 버튼으로 복귀. 조작 없이 1~2분 지나면 자동 진입(녹화 중 제외).
+- **절전모드**: 완전 검정 화면(OLED) + 카메라 해제. 아무 버튼으로 복귀. 조작 없이 1~2분 지나면 자동 진입(녹화 중 제외).
 - **수중모드**: 카메라 ISP의 화이트밸런스 게인을 조정해 빨강을 되살립니다. 미리보기·사진·영상에 동일 적용. 강도 3단계. 켜고 끌 때 2초 와이프로 전/후를 보여줌.
 - **다이빙 기록**: 시작/종료 시각, 총 시간, 시작·종료 GPS. 제목은 가까운 지명(영어)이 자동 입력. 편집·삭제·지도 열기.
 - **화면비** 16:9 / 16:10 / 4:3 — 미리보기에 보이는 영역이 그대로 저장. 영상 FHD/4K, 사진은 항상 최대.
 - **HUD**: 시각·배터리·다이브 시간·렌즈·화면비·수중 상태·REC. 버튼을 피해 왼쪽에만.
 - **절대 안 잠김**: 다이빙 내내 화면 켜짐 유지, 잠금화면 위에 표시. 종료는 플런저가 닿지 않는 왼쪽 아래를 길게.
-- **안 죽음**: 카메라 오류 시 자동 재연결. 진행 중 다이빙은 앱을 다시 켜도 이어짐.
+- **오류 복구**: 카메라 오류 시 자동 재연결. 진행 중 다이빙은 앱을 다시 켜도 이어짐.
 - **언어**: English · 한국어 · 日本語 · 中文.
 
 ### 테스트 기기
@@ -65,9 +65,11 @@ Android Studio 없이 됩니다. JDK 17, Android SDK platform 35, Gradle 8.7. �
 
 ### Why this exists
 
-The Diveroid housing has a small dive-computer sensor with a non-replaceable battery. When that battery dies, the official app refuses to work — even though the housing itself, and its three physical buttons, are perfectly fine. You are left with a waterproof case you can't shoot with.
+The Diveroid housing has a small dive-computer sensor with a non-replaceable battery. Once that battery dies, the official app refuses to run at all. The housing and its three physical buttons are still perfectly fine, and it felt like a waste to leave it in a drawer, so I made this.
 
-Diveroid Revive brings the housing back to life as a pure camera. It keeps the same three-button workflow as the original app and adds the things that were missing: real power saving, a dive timer with GPS, and underwater color correction that applies to photos and video, not just the preview.
+It keeps the original app's three-button workflow and tidies up a few things.
+
+Power save now turns the screen genuinely off, the way an OLED panel allows, and some errors that showed up after long sessions were fixed so waking back up is reliable.
 
 ### How the buttons work
 
@@ -83,13 +85,13 @@ Any button wakes the phone from power save.
 
 ### Features
 
-- **Power save that actually saves power**: pure black screen (OLED), camera released, wakes on any button. Auto-enters after 1 or 2 minutes of no input (not while recording).
+- **Power save**: pure black screen (OLED), camera released, wakes on any button. Auto-enters after 1 or 2 minutes of no input (not while recording).
 - **Underwater mode**: adjusts the camera ISP's white balance gains to recover reds. Applies identically to preview, photos and video. Three strengths. On/off reveals the change with a 2-second left-to-right wipe.
 - **Dive log**: start/end time, duration, start and end GPS. The title defaults to the nearest place name in English. Edit, delete, open in a map.
 - **Aspect ratio** 16:9 / 16:10 / 4:3 — what you see in the preview is exactly what is saved. Video in FHD or 4K. Photos always at full resolution.
 - **HUD**: time, battery, dive timer, lens, aspect, underwater state, REC timer — on the left, away from the buttons.
 - **Never locks**: the screen stays on and stays above the lock screen for the whole dive. Exit is a hold-only control at bottom-left, out of reach of the plungers.
-- **Crash-tolerant**: camera errors trigger an automatic rebind; an in-progress dive survives an app restart.
+- **Error recovery**: camera errors trigger an automatic rebind; an in-progress dive survives an app restart.
 - **Languages**: English, 한국어, 日本語, 中文.
 
 ### Tested on
