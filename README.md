@@ -1,8 +1,10 @@
-# Diveroid Revive
+# Diveroid Revive — 다이브로이드 케이스 카메라 앱 (센서 배터리 방전 시)
 
-**다이브로이드 방수 케이스용 비공식 카메라 앱.**
+**다이브로이드(Diveroid) 방수 케이스용 비공식 안드로이드 카메라 앱.** 센서 배터리가 다 돼서 공식 다이브로이드 앱이 안 켜질 때, 케이스와 물리 버튼만으로 수중 촬영을 계속할 수 있게 해줍니다.
 
-**An unofficial camera app for the Diveroid underwater phone housing.**
+**An unofficial Android camera app for the Diveroid underwater phone housing.** When the Diveroid sensor battery is dead and the official app won't start, this lets you keep shooting underwater with just the case and its physical buttons.
+
+이런 검색으로 오셨다면 맞게 찾아오신 겁니다: 다이브로이드 배터리 방전 · 다이브로이드 앱 안 됨 · 다이브로이드 센서 없이 · 다이브로이드 케이스만 사용 · 다이브로이드 대체 앱 · diveroid battery dead · diveroid app not working · diveroid without sensor · diveroid alternative app
 
 [한국어](#한국어) · [English](#english)
 
@@ -21,6 +23,13 @@
 원래 앱의 3버튼 조작법은 그대로 두고, 기능을 조금 보정했습니다.
 
 절전모드는 OLED 동작 특성을 고려해 화면이 진짜로 꺼지도록 했고, 오래 실행했을 때 나던 에러를 줄여 절전에서 깨어나는 것도 안정적으로 만들었습니다.
+
+### 자주 묻는 것
+
+- **다이브로이드 센서 배터리가 방전됐는데 교체가 되나요?** 센서는 밀봉돼 있어 사용자가 배터리를 바꿀 수 없습니다. 이 앱은 센서 없이 케이스만으로 촬영하게 해 줍니다.
+- **공식 다이브로이드 앱이 안 켜져요.** 센서가 연결되지 않으면 공식 앱은 카메라 기능을 막습니다. 이 앱은 센서를 전혀 쓰지 않습니다.
+- **수심·수온은 나오나요?** 아니요. 센서가 없으니 다이브 컴퓨터 기능은 없습니다. 카메라, 다이빙 시간, GPS 위치 기록만 됩니다.
+- **아이폰도 되나요?** 아니요. 안드로이드 전용입니다.
 
 ### 버튼
 
@@ -70,6 +79,13 @@ The Diveroid housing has a small dive-computer sensor with a non-replaceable bat
 It keeps the original app's three-button workflow and tidies up a few things.
 
 Power save now turns the screen genuinely off, the way an OLED panel allows, and some errors that showed up after long sessions were fixed so waking back up is reliable.
+
+### FAQ
+
+- **The Diveroid sensor battery is dead — can it be replaced?** The sensor is sealed; the battery isn't user-replaceable. This app lets you shoot with the housing alone, no sensor needed.
+- **The official Diveroid app won't start.** Without a connected sensor the official app blocks the camera. This app never talks to the sensor.
+- **Does it show depth or temperature?** No. Without the sensor there is no dive-computer data. You get the camera, a dive timer and GPS logging.
+- **iPhone?** No, Android only.
 
 ### How the buttons work
 
