@@ -1,0 +1,17 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "A · Dive Computer — camera", "x": 0, "y": 0, "w": 844, "h": 390 },
+    { "file": "GlassCamera.dc.html", "title": "B · Glass — camera", "x": 944, "y": 0, "w": 844, "h": 390 },
+    { "file": "SportCamera.dc.html", "title": "C · Sport — camera", "x": 1888, "y": 0, "w": 844, "h": 390 },
+    { "file": "ComputerStart.dc.html", "title": "A · Dive Computer — start", "x": 0, "y": 560, "w": 390, "h": 844 },
+    { "file": "GlassStart.dc.html", "title": "B · Glass — start", "x": 944, "y": 560, "w": 390, "h": 844 },
+    { "file": "SportStart.dc.html", "title": "C · Sport — start", "x": 1888, "y": 560, "w": 390, "h": 844 }
+  ],
+  "annotations": [
+    { "id": "dir-a", "x": 0, "y": -200, "w": 400, "text": "A · 다이브 컴퓨터\n검정 바탕에 시안 하나. 각진 모서리, 숫자는 계기판 서체(Chakra Petch), 라벨은 대문자 자간.\n장점: 물속·어두운 곳에서 가장 잘 읽힘. 다이브 컴퓨터 옆에 있어도 어색하지 않음.\n단점: 차갑고 도구 같은 인상. '예쁘다'보다 '정확하다'." },
+    { "id": "dir-b", "x": 944, "y": -200, "w": 400, "text": "B · 글래스\n반투명 유리 패널, 얇은 서체(Manrope), 정보는 최소만. 큰 숫자 하나(다이브 시간)만 강조.\n장점: 사진이 주인공. 가장 세련되고 요즘 카메라 앱 같음.\n단점: 밝은 수면 근처에선 흰 글자 대비가 떨어질 수 있음. 버튼 구역 표시가 옅음." },
+    { "id": "dir-c", "x": 1888, "y": -200, "w": 400, "text": "C · 스포츠 액션캠\n노랑/검정, 굵고 둥근 알약과 큰 버튼, 아이콘 있는 버튼 구역. 시작 화면은 노랑 바탕.\n장점: 물 밖에서도 한눈에 보임. 버튼이 '누르는 것'처럼 보여 직관적.\n단점: 화면이 시끄러움. 사진 감상엔 방해. 노랑은 호불호." },
+    { "id": "common", "x": 500, "y": 1500, "w": 900, "text": "세 방향 공통으로 지킨 것: 오른쪽 28%는 버튼 구역(플런저 자리)이라 정보는 왼쪽에만 · 다이브 시간이 가장 큰 숫자 · 종료는 플런저가 닿지 않는 자리 · 배경의 파란 그라데이션은 실제 카메라 프리뷰 자리(콘티용)" }
+  ],
+  "launch": { "view": "canvas" }
+}

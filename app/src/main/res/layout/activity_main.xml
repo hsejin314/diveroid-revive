@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="44dp"
+        android:paddingBottom="24dp">
+
+        <!-- 헤더 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chakra_petch_bold"
+                android:letterSpacing="0.12"
+                android:text="DIVEROID REVIVE"
+                android:textColor="@color/text"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/device"
+                style="@style/HudLabel"
+                android:textColor="@color/muted" />
+        </LinearLayout>
+
+        <!-- 시작 블록 -->
+        <LinearLayout
+            android:id="@+id/startBlock"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/block_start"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/startTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chakra_petch_bold"
+                android:letterSpacing="0.15"
+                android:textAllCaps="true"
+                android:textColor="@color/accent"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/startSub"
+                style="@style/HudLabel"
+                android:layout_marginTop="6dp"
+                android:letterSpacing="0.15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnEndDive"
+            style="@style/OutlineButton"
+            android:layout_marginTop="8dp"
+            android:text="@string/end_dive_record"
+            android:visibility="gone" />
+
+        <!-- 최근 다이빙 -->
+        <LinearLayout
+            android:id="@+id/lastDive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/panel_accent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lastLabel"
+                    style="@style/HudLabel" />
+
+                <TextView
+                    android:id="@+id/lastTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textColor="@color/text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lastDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chakra_petch_bold"
+                android:textColor="@color/text"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <!-- 설정 -->
+        <TextView style="@style/Section" android:text="@string/section_aspect" />
+        <LinearLayout android:id="@+id/segAspect" style="@style/Segment" />
+
+        <TextView style="@style/Section" android:text="@string/section_resolution" />
+        <LinearLayout android:id="@+id/segVideo" style="@style/Segment" />
+
+        <TextView style="@style/Section" android:text="@string/section_uw" />
+        <LinearLayout android:id="@+id/segUw" style="@style/Segment" />
+
+        <TextView style="@style/Section" android:text="@string/section_sleep" />
+        <LinearLayout android:id="@+id/segSleep" style="@style/Segment" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/divider" />
+
+        <LinearLayout android:id="@+id/rowOrient" style="@style/Row">
+            <TextView style="@style/RowLabel" android:text="@string/orientation" />
+            <TextView android:id="@+id/orientValue" style="@style/RowValue" />
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+        <LinearLayout android:id="@+id/rowLang" style="@style/Row">
+            <TextView style="@style/RowLabel" android:text="@string/section_language" />
+            <TextView android:id="@+id/langValue" style="@style/RowValue" />
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/btnLogs"
+            style="@style/OutlineButton"
+            android:layout_marginTop="18dp"
+            android:text="@string/dive_logs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/help_text"
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>

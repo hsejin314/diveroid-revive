@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@500;600&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Rajdhani', 'Arial Narrow', sans-serif; }
+    a { color: #4fe3ff; } a:hover { color: #9df0ff; }
+  </style>
+</helmet>
+<div style="position: relative; width: 844px; height: 390px; overflow: hidden; background: #05080c; color: #e8f6fa;">
+  <!-- 프리뷰 자리 (16:9 레터박스) -->
+  <div style="position: absolute; left: 76px; top: 0; width: 692px; height: 390px; background: linear-gradient(180deg, #0c4a6e 0%, #0a6b85 35%, #0e7f8e 60%, #07424f 100%);"></div>
+  <div style="position: absolute; left: 76px; top: 0; width: 692px; height: 390px; background: radial-gradient(ellipse at 60% 20%, rgba(180,240,255,0.35), transparent 55%);"></div>
+
+  <!-- HUD 왼쪽 열 -->
+  <div style="position: absolute; left: 88px; top: 14px; display: flex; flex-direction: column; gap: 10px; width: 210px;">
+    <div style="display: flex; gap: 8px; align-items: baseline;">
+      <div style="font-family: 'Chakra Petch', monospace; font-size: 30px; font-weight: 700; letter-spacing: 1px; color: #ffffff;">14:32</div>
+      <div style="font-family: 'Chakra Petch', monospace; font-size: 15px; font-weight: 600; color: #4fe3ff; letter-spacing: 1px;">BAT 87%</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0px; border-left: 3px solid #4fe3ff; padding-left: 10px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 3px; color: #8fd3e0;">DIVE TIME</div>
+      <div style="font-family: 'Chakra Petch', monospace; font-size: 48px; font-weight: 700; line-height: 1; color: #ffffff;">49<span style="font-size: 20px; color: #8fd3e0;">:12</span></div>
+    </div>
+    <div style="display: flex; gap: 6px;">
+      <div style="padding: 4px 10px; border: 1px solid #4fe3ff; color: #4fe3ff; font-size: 14px; font-weight: 600; letter-spacing: 2px;">WIDE</div>
+      <div style="padding: 4px 10px; border: 1px solid #3b5560; color: #8fd3e0; font-size: 14px; font-weight: 600; letter-spacing: 2px;">16:9</div>
+      <div style="padding: 4px 10px; background: #4fe3ff; color: #05080c; font-size: 14px; font-weight: 700; letter-spacing: 2px;">UW · MID</div>
+    </div>
+    <div style="display: flex; gap: 8px; align-items: center;">
+      <div style="width: 10px; height: 10px; border-radius: 50%; background: #ff5252;"></div>
+      <div style="font-family: 'Chakra Petch', monospace; font-size: 18px; font-weight: 600; color: #ff8a80; letter-spacing: 1px;">REC 01:23</div>
+    </div>
+  </div>
+
+  <!-- 버튼 구역: 링 + 눈금 라벨 -->
+  <div style="position: absolute; left: 730px; top: 78px; width: 54px; height: 54px; border-radius: 50%; border: 2px solid rgba(79,227,255,0.8); box-shadow: 0 0 0 4px rgba(79,227,255,0.12);"></div>
+  <div style="position: absolute; left: 764px; top: 168px; width: 54px; height: 54px; border-radius: 50%; border: 2px solid #4fe3ff; background: rgba(79,227,255,0.25); box-shadow: 0 0 18px rgba(79,227,255,0.5);"></div>
+  <div style="position: absolute; left: 730px; top: 258px; width: 54px; height: 54px; border-radius: 50%; border: 2px solid rgba(79,227,255,0.8); box-shadow: 0 0 0 4px rgba(79,227,255,0.12);"></div>
+  <div style="position: absolute; left: 626px; top: 92px; text-align: right; width: 96px; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: #8fd3e0; line-height: 1.3;">SELECT<br><span style="color: #4a6a75;">HOLD · SLEEP</span></div>
+  <div style="position: absolute; left: 660px; top: 182px; text-align: right; width: 96px; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: #ffffff; line-height: 1.3;">SHUTTER<br><span style="color: #8fd3e0;">HOLD · VIDEO</span></div>
+  <div style="position: absolute; left: 626px; top: 272px; text-align: right; width: 96px; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: #8fd3e0; line-height: 1.3;">FOCUS<br><span style="color: #4a6a75;">HOLD · UW</span></div>
+
+  <!-- 중앙 십자 -->
+  <div style="position: absolute; left: 412px; top: 185px; width: 20px; height: 20px; border: 1px solid rgba(255,255,255,0.5);"></div>
+
+  <!-- 종료 -->
+  <div style="position: absolute; left: 88px; bottom: 14px; padding: 6px 12px; border: 1px solid #3b5560; color: #8fd3e0; font-size: 13px; font-weight: 600; letter-spacing: 2px;">EXIT · HOLD</div>
+</div>
+</x-dc>
+</body>
+</html>

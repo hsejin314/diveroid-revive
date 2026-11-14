@@ -1,0 +1,17 @@
+.gradle/
+build/
+local.properties
+*.apk
+*.iml
+.idea/
+# 디자인 캔버스 산출물(2MB, 아트보드 원본만 커밋)
+design/*.html
+!design/*.dc.html
+
+# 로컬 전용 (경로·내부 메모)
+CLAUDE.md
+HANDOFF*.md
+# 서명 키 설정 (저장소 밖 키 파일을 가리킴)
+keystore.properties
+*.jks
+*.keystore

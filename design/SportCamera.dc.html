@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:wght@600;800&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Nunito', 'Trebuchet MS', sans-serif; }
+    a { color: #ffd60a; } a:hover { color: #ffe766; }
+  </style>
+</helmet>
+<div style="position: relative; width: 844px; height: 390px; overflow: hidden; background: #0b0b0d; color: #ffffff;">
+  <div style="position: absolute; left: 76px; top: 0; width: 692px; height: 390px; background: linear-gradient(180deg, #0c4a6e 0%, #0a6b85 35%, #0e7f8e 60%, #07424f 100%);"></div>
+  <div style="position: absolute; left: 76px; top: 0; width: 692px; height: 390px; background: radial-gradient(ellipse at 60% 20%, rgba(180,240,255,0.35), transparent 55%);"></div>
+
+  <!-- 상단: 큼직한 알약들 -->
+  <div style="position: absolute; left: 90px; top: 14px; display: flex; gap: 8px; align-items: center;">
+    <div style="padding: 6px 14px; border-radius: 14px; background: #0b0b0d; font-family: 'Archivo Black', Impact, sans-serif; font-size: 20px;">14:32</div>
+    <div style="padding: 6px 14px; border-radius: 14px; background: #0b0b0d; font-size: 16px; font-weight: 800; color: #9be564;">87%</div>
+    <div style="padding: 6px 14px; border-radius: 14px; background: #ffd60a; color: #0b0b0d; font-size: 16px; font-weight: 800;">WIDE</div>
+    <div style="padding: 6px 14px; border-radius: 14px; background: #0b0b0d; font-size: 16px; font-weight: 800; opacity: 0.85;">16:9</div>
+  </div>
+
+  <!-- 왼쪽 아래: 다이브 시간 + 수중 -->
+  <div style="position: absolute; left: 90px; bottom: 14px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start;">
+    <div style="padding: 6px 14px; border-radius: 14px; background: #ff7a00; color: #0b0b0d; font-size: 15px; font-weight: 800;">UW ON · MID</div>
+    <div style="display: flex; align-items: baseline; gap: 8px; padding: 8px 16px; border-radius: 18px; background: #0b0b0d;">
+      <div style="font-size: 13px; font-weight: 800; color: #ffd60a; letter-spacing: 1px;">DIVE</div>
+      <div style="font-family: 'Archivo Black', Impact, sans-serif; font-size: 40px; line-height: 1;">49:12</div>
+    </div>
+  </div>
+
+  <!-- REC -->
+  <div style="position: absolute; left: 380px; top: 14px; display: flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 14px; background: #e5261f;">
+    <div style="width: 10px; height: 10px; border-radius: 50%; background: #fff;"></div>
+    <div style="font-family: 'Archivo Black', Impact, sans-serif; font-size: 18px;">REC 01:23</div>
+  </div>
+
+  <!-- 버튼 구역: 굵은 둥근 사각 + 굵은 라벨 -->
+  <div style="position: absolute; left: 726px; top: 74px; width: 62px; height: 62px; border-radius: 18px; border: 3px solid #ffd60a; display: flex; align-items: center; justify-content: center;">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M12 4l8 8-8 8"/></svg>
+  </div>
+  <div style="position: absolute; left: 760px; top: 164px; width: 62px; height: 62px; border-radius: 18px; background: #ffd60a; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 5px rgba(255,214,10,0.25);">
+    <div style="width: 26px; height: 26px; border-radius: 50%; border: 3px solid #0b0b0d;"></div>
+  </div>
+  <div style="position: absolute; left: 726px; top: 254px; width: 62px; height: 62px; border-radius: 18px; border: 3px solid #ffd60a; display: flex; align-items: center; justify-content: center;">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="2.5" stroke-linecap="round"><path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/><circle cx="12" cy="12" r="3"/></svg>
+  </div>
+  <div style="position: absolute; left: 620px; top: 92px; width: 96px; text-align: right; font-size: 13px; font-weight: 800; line-height: 1.25;">SELECT<br><span style="color: #ffd60a;">hold: SLEEP</span></div>
+  <div style="position: absolute; left: 654px; top: 182px; width: 96px; text-align: right; font-size: 13px; font-weight: 800; line-height: 1.25;">SHUTTER<br><span style="color: #ffd60a;">hold: VIDEO</span></div>
+  <div style="position: absolute; left: 620px; top: 272px; width: 96px; text-align: right; font-size: 13px; font-weight: 800; line-height: 1.25;">FOCUS<br><span style="color: #ffd60a;">hold: UW</span></div>
+
+  <!-- 종료 -->
+  <div style="position: absolute; left: 380px; bottom: 14px; padding: 8px 16px; border-radius: 14px; background: rgba(11,11,13,0.8); font-size: 14px; font-weight: 800; opacity: 0.9;">EXIT · hold</div>
+</div>
+</x-dc>
+</body>
+</html>

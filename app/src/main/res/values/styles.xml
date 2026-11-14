@@ -1,0 +1,140 @@
+<resources>
+    <!-- ── 촬영 화면 ── -->
+    <style name="HudNumber">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/chakra_petch_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="HudLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textColor">@color/accent_dim</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Chip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:background">@drawable/chip_dim</item>
+        <item name="android:textColor">@color/accent_dim</item>
+    </style>
+
+    <style name="ZoneLabel">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">end</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+        <item name="android:textColor">@color/accent_dim</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowRadius">6</item>
+    </style>
+
+    <!-- ── 시작/기록 화면 ── -->
+    <style name="Section">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textColor">@color/accent_dim</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Segment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/seg_border</item>
+    </style>
+
+    <style name="Row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="RowLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="RowValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="OutlineButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:background">@drawable/chip_border</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/accent_dim</item>
+    </style>
+
+    <style name="DetailLabel" parent="Section">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="DetailValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="DiveEdit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/seg_border</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:fontFamily">@font/rajdhani_semibold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorHint">@color/muted</item>
+    </style>
+</resources>

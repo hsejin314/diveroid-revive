@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Diveroid Revive</string>
+
+    <!-- Main -->
+    <string name="start_dive">Start dive</string>
+    <string name="continue_dive">Continue camera (resume dive)</string>
+    <string name="end_dive_record">End dive (save log)</string>
+    <string name="active_dive_fmt">Dive in progress: started %1$s (%2$s elapsed)</string>
+    <string name="dive_logs">Dive logs</string>
+    <string name="section_orientation">Screen orientation (case buttons on the right)</string>
+    <string name="orient_auto">Auto (lock to the direction held at start)</string>
+    <string name="orient_left">Phone top (camera) on the left</string>
+    <string name="orient_right">Phone top (camera) on the right</string>
+    <string name="section_resolution">Video resolution</string>
+    <string name="section_aspect">Aspect ratio</string>
+    <string name="section_sleep">Auto power save (no button input, not recording)</string>
+    <string name="sleep_1">1 min</string>
+    <string name="sleep_2">2 min</string>
+    <string name="sleep_off">Off</string>
+    <string name="section_uw">Underwater color strength (weak = shallow · strong = deep)</string>
+    <string name="uw_weak">Weak</string>
+    <string name="uw_mid">Medium</string>
+    <string name="uw_strong">Strong</string>
+    <string name="section_language">Language</string>
+    <string name="help_text">Top: selector (ultra-wide → wide → zoom → selfie) / hold: power save\nMiddle: select · shutter / hold: video\nBottom: focus / hold: underwater mode\nAny button wakes from power save\nExit: hold \"Exit\" at bottom-left (with the case open)</string>
+
+    <!-- Logs -->
+    <string name="no_logs">No logs</string>
+    <string name="delete_confirm">Delete this log?</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="saved">Saved</string>
+    <string name="label_title">Title</string>
+    <string name="label_memo">Memo</string>
+    <string name="label_start">Start</string>
+    <string name="label_end">End</string>
+    <string name="label_duration">Duration</string>
+    <string name="label_start_loc">Start location</string>
+    <string name="label_end_loc">End location</string>
+    <string name="open_map">Open in map</string>
+    <string name="none">—</string>
+    <string name="hours_min_fmt">%1$dh %2$dm</string>
+    <string name="min_fmt">%dm</string>
+    <string name="untitled">Dive</string>
+
+    <!-- Camera -->
+    <string name="lens_ultra">Ultra-wide</string>
+    <string name="lens_wide">Wide</string>
+    <string name="lens_tele">Zoom</string>
+    <string name="lens_selfie">Selfie</string>
+    <string name="uw_off">UW OFF</string>
+    <string name="uw_on_fmt">UW ON · %s</string>
+    <string name="uw_on_simple">UW ON · basic (WB preset)</string>
+    <string name="uw_level_weak">Weak</string>
+    <string name="uw_level_mid">Medium</string>
+    <string name="uw_level_strong">Strong</string>
+    <string name="rec">● REC</string>
+    <string name="rec_fmt">● REC %1$d:%2$02d</string>
+    <string name="bat_fmt">BAT %d%%</string>
+    <string name="dive_fmt">DIVE %s</string>
+    <string name="exit_hold">Exit · Hold</string>
+    <string name="exit_hint">To exit, hold \"Exit\" at bottom-left</string>
+    <string name="cam_perm_needed">Camera permission required</string>
+    <string name="cam_start_fail_fmt">Camera failed to start: %s</string>
+    <string name="cam_error_fmt">Camera error (%d), restarting…</string>
+    <string name="photo_saved">Photo saved</string>
+    <string name="photo_fail_fmt">Photo failed: %s</string>
+    <string name="video_saved">Video saved</string>
+    <string name="video_fail_fmt">Video failed (%d)</string>
+    <string name="no_switch_recording">Cannot switch camera while recording</string>
+    <string name="zone_top">Select</string>
+    <string name="zone_mid">Shutter</string>
+    <string name="zone_bottom">Focus</string>
+    <string name="dive_time_label">Dive time</string>
+    <string name="last_dive">Last dive</string>
+    <string name="zone_top_hold">Hold · Sleep</string>
+    <string name="zone_mid_hold">Hold · Video</string>
+    <string name="zone_bottom_hold">Hold · UW</string>
+    <string name="device">Galaxy</string>
+    <string name="orientation">Screen orientation</string>
+    <string name="orient_auto_short">Auto</string>
+    <string name="orient_left_short">Top on left</string>
+    <string name="orient_right_short">Top on right</string>
+</resources>
